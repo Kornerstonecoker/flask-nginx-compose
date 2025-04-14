@@ -1,0 +1,11 @@
+FROM python:3.10
+
+WORKDIR /app
+
+COPY app/requirements.text .
+
+RUN pip install -r requirements.txt
+
+COPY app /app
+
+CMD ["python", "main.py"]
