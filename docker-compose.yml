@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   flask:
-    build:
+    build: .
     container_name: flask-app
     expose:
       - "5000"
@@ -21,4 +21,5 @@ services:
     networks:
       - webnet
 
-networks: webnet
+networks:
+  webnet:
